@@ -1,0 +1,38 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AccessToken {
+  accessToken: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  createUser(password: String!, username: String!): NewUser!
+}
+
+type NewUser {
+  email: String!
+  password: String!
+  username: String!
+}
+
+type Query {
+  getUser(id: String!): User!
+  getUsers: [User!]!
+  loginUser(password: String!, username: String!): AccessToken!
+  logonGithub: AccessToken!
+  whoAmI: User!
+}
+
+type User {
+  createdAt: DateTime!
+  email: String!
+  id: ID!
+  updatedAt: DateTime!
+  username: String!
+}

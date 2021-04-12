@@ -1,0 +1,5 @@
+{
+  "database": "db.sqlite3",
+  "logging": false,
+  "type": "sqlite"
+}
